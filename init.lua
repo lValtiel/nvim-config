@@ -34,7 +34,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-  -- 🎨 Tema
+  -- Tema
   {
     "folke/tokyonight.nvim",
     config = function()
@@ -44,7 +44,7 @@ require("lazy").setup({
       })
       vim.cmd("colorscheme tokyonight")
 
--- ✨ Colores más "neon"
+-- Colores neon"
 vim.api.nvim_set_hl(0, "Keyword", {
   fg = "#ff00ff",
   bold = true
@@ -71,12 +71,12 @@ vim.api.nvim_set_hl(0, "Comment", {
     end
   },
 
-  -- 🧠 LSP
+  --  LSP
   {
     "neovim/nvim-lspconfig"
   },
 
-  -- 🖥️ TERMINAL
+  -- TERMINAL
   {
     "akinsho/toggleterm.nvim",
     version = "*",
@@ -86,10 +86,10 @@ vim.api.nvim_set_hl(0, "Comment", {
         direction = "horizontal",
       })
 
-      -- ⚠️ Ctrl+Enter (puede no funcionar)
+      -- Ctrl+Enter
       vim.keymap.set("n", "<C-CR>", ":ToggleTerm<CR>")
 
-      -- ✅ fallback seguro
+      -- fallback seguro
       vim.keymap.set("n", "<C-t>", ":ToggleTerm<CR>")
 
       -- salir fácil de terminal
@@ -116,7 +116,7 @@ vim.api.nvim_set_hl(0, "Comment", {
 	end,
    },
 
-  -- ⚡ Autocompletado
+  --  Autocompletado
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -137,7 +137,7 @@ vim.api.nvim_set_hl(0, "Comment", {
     end
   },
 
-  -- 🌳 Árbol
+  --  Árbol
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -149,17 +149,17 @@ vim.api.nvim_set_hl(0, "Comment", {
 })
 
 -- ========================
--- 🎨 TRANSPARENCIA
+--  TRANSPARENCIA
 -- ========================
 vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi NormalNC guibg=NONE ctermbg=NONE]])
 
 -- ========================
--- ⌨️ ATAJOS
+--  ATAJOS
 -- ========================
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
--- ▶️ Ejecutar Java rápido
+--  Ejecutar Java rápido
 vim.keymap.set("n", "<leader>r", function()
   vim.cmd("w")
   vim.cmd("ToggleTerm")
